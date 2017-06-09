@@ -6,6 +6,10 @@ You can clone and run:
 
 >`npm install`
 
+Or install with:
+
+>`npm install adjetiveisor --save`
+
 To run the tests, writen with `jest` use:
 
 >`npm test`
@@ -13,6 +17,18 @@ To run the tests, writen with `jest` use:
 If you wanna make modifications on the code and run the tests on save run:
 
 >`npm test -- --watch`
+
+# Usage
+
+>`const adj = require('adjetiveisor')`;
+
+> `adj.config({ms:'jodido', mp:'jodidos', fs:'jodida', fp:'jodidas'});`
+
+>`const translated = adj.translate('el coche'); // el jodido coche`
+
+You can find examples on examples directory.
+
+# Contributions
 
 Feel free to pull request, but please, use `standard` to fix your code before doing it. You can install globally and fix your code with the next commands:
 
