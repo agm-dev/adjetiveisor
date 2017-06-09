@@ -25,6 +25,7 @@ test('does a correct translation on verbose config provided', () => {
   expect(adjet.translate('tengo mi coche en la acera')).toBe('tengo mi coche en la puta acera')
   adjet.verbose(true)
   expect(adjet.translate('tengo mi coche en la acera')).toBe('tengo mi puto coche en la puta acera')
+  adjet.verbose(false)
 })
 
 test('removes duplicates', () => {

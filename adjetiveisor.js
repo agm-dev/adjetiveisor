@@ -33,7 +33,7 @@ const adjetiveisor = function (configData) {
         endOfWord: { os: malePlural, as: femalePlural }
       })
 
-      verboseTraductions[maleSingular] = ['me', 'te', 'se']
+      verboseTraductions[maleSingular] = ['me', 'te', 'se', 'mi', 'tu', 'su']
       return true
     } else {
       return false
@@ -119,7 +119,7 @@ const adjetiveisor = function (configData) {
 
       if (verbose) {
         for (var j = 0; j < verboseTraductionsKeys.length; j++) {
-          if (verboseTraductions[verboseTraductionsKeys[j]].indexOf(wordBefore)) {
+          if (verboseTraductions[verboseTraductionsKeys[j]].indexOf(wordBefore) !== -1) {
             translatedWords.push(verboseTraductionsKeys[j])
             break
           }
@@ -133,10 +133,10 @@ const adjetiveisor = function (configData) {
 
     // Remove repeated added adjetives:
     const regexs = [
-      { r: new RegExp(`(${maleSingular}+ )\\1{2,}`, 'img'), t: `${maleSingular} ` },
-      { r: new RegExp(`(${malePlural}+ )\\1{2,}`, 'img'), t: `${malePlural} ` },
-      { r: new RegExp(`(${femaleSingular}+ )\\1{2,}`, 'img'), t: `${femaleSingular} ` },
-      { r: new RegExp(`(${femalePlural}+ )\\1{2,}`, 'img'), t: `${femalePlural} ` }
+      { r: new RegExp(`(${maleSingular}+ )\\1{1,}`, 'img'), t: `${maleSingular} ` },
+      { r: new RegExp(`(${malePlural}+ )\\1{1,}`, 'img'), t: `${malePlural} ` },
+      { r: new RegExp(`(${femaleSingular}+ )\\1{1,}`, 'img'), t: `${femaleSingular} ` },
+      { r: new RegExp(`(${femalePlural}+ )\\1{1,}`, 'img'), t: `${femalePlural} ` }
     ]
 
     regexs.map(regex => {
