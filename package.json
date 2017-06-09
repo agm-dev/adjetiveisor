@@ -4,7 +4,7 @@
   "description": "That looks like a job for the Night Watch...",
   "main": "adjetiveisor.js",
   "scripts": {
-    "test": "standard && jest"
+    "test": "jest"
   },
   "dependencies": {},
   "devDependencies": {
