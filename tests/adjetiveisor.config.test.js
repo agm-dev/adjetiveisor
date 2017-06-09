@@ -1,4 +1,4 @@
-const adjet = require('./adjetiveisor')
+const adjet = require('../adjetiveisor')
 
 test('config method returns true if correct config object is provided', () => {
   const config = {

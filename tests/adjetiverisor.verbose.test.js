@@ -1,4 +1,4 @@
-const adjet = require('./adjetiveisor')
+const adjet = require('../adjetiveisor')
 
 test('verbose method returns true if true value received', () => {
   expect(adjet.verbose(true)).toBe(true)

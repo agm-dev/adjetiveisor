@@ -1,4 +1,4 @@
-const adjet = require('./adjetiveisor')
+const adjet = require('../adjetiveisor')
 
 test('fails if no configured', () => {
   expect(adjet.translate('any text')).toBe('missing config')
