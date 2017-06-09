@@ -1,0 +1,28 @@
+{
+  "name": "adjetiveisor",
+  "version": "1.0.0",
+  "description": "That looks like a job for the Night Watch...",
+  "main": "adjetiveisor.js",
+  "scripts": {
+    "test": "standard && jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^20.0.4",
+    "standard": "^10.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agm-dev/adjetiveisor.git"
+  },
+  "keywords": [
+    "translator",
+    "joke"
+  ],
+  "author": "Adrián Gonzalo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agm-dev/adjetiveisor/issues"
+  },
+  "homepage": "https://github.com/agm-dev/adjetiveisor#readme"
+}
