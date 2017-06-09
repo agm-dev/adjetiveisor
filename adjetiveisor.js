@@ -1,4 +1,4 @@
-const adjetiveisor = (function (configData) {
+const adjetiveisor = function (configData) {
   // Properties:
   let maleSingular
   let malePlural
@@ -133,21 +133,21 @@ const adjetiveisor = (function (configData) {
 
     // Remove repeated added adjetives:
     const regexs = [
-      { r: new RegExp(`${maleSingular} ${maleSingular}`, 'img'), t: maleSingular },
-      { r: new RegExp(`${malePlural} ${malePlural}`, 'img'), t: malePlural },
-      { r: new RegExp(`${femaleSingular} ${femaleSingular}`, 'img'), t: femaleSingular },
-      { r: new RegExp(`${femalePlural} ${femalePlural}`, 'img'), t: femalePlural }
+      { r: new RegExp(`(${maleSingular}+ )\\1{2,}`, 'img'), t: `${maleSingular} ` },
+      { r: new RegExp(`(${malePlural}+ )\\1{2,}`, 'img'), t: `${malePlural} ` },
+      { r: new RegExp(`(${femaleSingular}+ )\\1{2,}`, 'img'), t: `${femaleSingular} ` },
+      { r: new RegExp(`(${femalePlural}+ )\\1{2,}`, 'img'), t: `${femalePlural} ` }
     ]
 
     regexs.map(regex => {
-      translatedSentence.replace(regex.r, regex.t)
+      translatedSentence = translatedSentence.replace(regex.r, regex.t)
     })
 
     return translatedSentence
   }
 
   // Initial config:
-  setConfig(configData);
+  setConfig(configData)
 
   // Public methods:
   return {
@@ -162,6 +162,6 @@ const adjetiveisor = (function (configData) {
     }
 
   }
-})
+}
 
 module.exports = adjetiveisor
