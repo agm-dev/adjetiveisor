@@ -1,4 +1,4 @@
-const adjetiveisor = (function () {
+const adjetiveisor = (function (configData) {
   // Properties:
   let maleSingular
   let malePlural
@@ -146,6 +146,9 @@ const adjetiveisor = (function () {
     return translatedSentence
   }
 
+  // Initial config:
+  setConfig(configData);
+
   // Public methods:
   return {
     config: (config) => {
@@ -159,6 +162,6 @@ const adjetiveisor = (function () {
     }
 
   }
-})()
+})
 
 module.exports = adjetiveisor

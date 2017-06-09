@@ -1,4 +1,5 @@
-const adj = require('../adjetiveisor')
+const adjetiveisor = require('../adjetiveisor')
+const adj = adjetiveisor()
 
 // Config for male singular, male plural, female singular, female plural
 adj.config({
